@@ -29,6 +29,7 @@ function isValaidId(request, response, next) {
   return next();
 }
 
+api.use(logRequest)
 api.use('/repositories/:id', isValaidId)
 
 
